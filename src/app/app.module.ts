@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,6 +13,7 @@ import { AppComponent } from './app.component';
   /** 引入其他功能模块 */
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule
   ],
   exports: [AppComponent], /** 将模块内部成员export出去 */
