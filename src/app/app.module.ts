@@ -4,13 +4,15 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PercentTransform } from './test.pipe';
 import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   /** 模块可以包含‘组件’，‘指令’，‘管道’，这里是声明本模块内部成员*/
   declarations: [
     AppComponent,
-    HighlightDirective
+    HighlightDirective,
+    PercentTransform,
   ],
   /** 引入其他功能模块 */
   imports: [
