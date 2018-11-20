@@ -8,5 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent { 
   title = 'angular-demo';
+  cities = ['上海', '北京', '广州', '深圳'];
+  value = '';
+  update(value: string) { this.value = value; }
   birthday = new Date();
 }
