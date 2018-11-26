@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ChildComponent } from './child.component';
+import { ChildOneComponent } from './child1/';
 import { PercentTransform } from './test.pipe';
 import { HighlightDirective } from './highlight.directive';
 
@@ -11,6 +13,8 @@ import { HighlightDirective } from './highlight.directive';
   /** 模块可以包含‘组件’，‘指令’，‘管道’，这里是声明本模块内部成员*/
   declarations: [
     AppComponent,
+    ChildOneComponent,
+    ChildComponent,
     HighlightDirective,
     PercentTransform,
   ],

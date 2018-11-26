@@ -1,0 +1,24 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div>
+  <h1 appHighlight>
+    Welcome to {{ title }}!
+  </h1>
+  <ul>
+    <li *ngFor="let city of cities">
+    {{ city }}
+    </li>
+  </ul>
+  <span><p *ngIf="cities.length > 3">一线城市超过了3个</p></span>
+  <input #box
+      value="default"
+      (keyup.enter)="update(box.value)"
+      (blur)="update(box.value)">
+    <p>{{value}}</p>
+    <p>attribute 始终是"{{box.getAttribute('value')}}"</p>
+</div>
+<p>{{ birthday | date:"yyyy-MM-dd" }}
+<p>数值➕%号  {{2 | percentTransform}}</p>
+<table>
+<!-- <tr><td colspan="{{1 + 1}}">Three-Four</td></tr> -->
+<tr><td [attr.colspan]="2">One-Two</td></tr>
+</table>
