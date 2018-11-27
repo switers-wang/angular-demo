@@ -2,12 +2,10 @@ import { Component } from '@angular/core';
 
   /** 这里就是这个组件的元数据*/
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./index.less']
-
+  selector: 'child-two',
+  templateUrl: './index.html',
 })
-export class AppComponent { 
+export class ChildTwoComponent {
   title = 'angular-demo';
   cities = ['上海', '北京', '广州', '深圳'];
   value = '';
