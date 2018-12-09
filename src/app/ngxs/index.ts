@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Store, Select } from '@ngxs/store';
 import { Observable } from 'rxjs';
-import { Add, CountState } from './state';
+import { Add, CountState, Change } from './state';
 
 @Component({
   selector: 'my-app',
@@ -9,10 +9,13 @@ import { Add, CountState } from './state';
 })
 export class Ngxs  {
 
-  @Select(CountState) count$: Observable<number>;
+  @Select(CountState) count$: Observable<object>;
 
   constructor(private store: Store) {}
 
+  onChange(value) {
+    this.store.dispatch(new Change(value));
+  }
   onClick() {
     this.store.dispatch(new Add());
   }
