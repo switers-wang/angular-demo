@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ChildOneComponent }  from './child1/index';
 import { ChildTwoComponent }  from './child2/index';
+import { Ngxs } from './ngxs/index';
 import { NoFind }    from './noFind/index';
 
 const appRoutes: Routes = [
@@ -13,6 +14,10 @@ const appRoutes: Routes = [
   {
     path: 'child2',
     component: ChildTwoComponent,
+  },
+  {
+    path: 'ngxs',
+    component: Ngxs,
   },
   { path: '',   redirectTo: '/child1', pathMatch: 'full' },
   { path: '**', component: NoFind }

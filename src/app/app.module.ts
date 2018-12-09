@@ -1,13 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
+import { NgxsModule } from '@ngxs/store';
 
 // import { AppRoutingModule } from './app-routing.module';
 import { AppRoutingModule } from './router';
+import { CountState } from './ngxs/state';
 import { AppComponent } from './app.component';
 import { ChildComponent } from './child.component';
 import { ChildOneComponent } from './child1/';
 import { ChildTwoComponent } from './child2/';
+import { Ngxs } from './ngxs/';
 import { NoFind }    from './noFind/index';
 import { PercentTransform } from './test.pipe';
 import { HighlightDirective } from './highlight.directive';
@@ -19,6 +22,7 @@ import { HighlightDirective } from './highlight.directive';
     ChildTwoComponent,
     ChildOneComponent,
     ChildComponent,
+    Ngxs,
     NoFind,
     HighlightDirective,
     PercentTransform,
@@ -27,6 +31,7 @@ import { HighlightDirective } from './highlight.directive';
   imports: [
     BrowserModule,
     FormsModule,
+    NgxsModule.forRoot([CountState]),
     AppRoutingModule
   ],
   exports: [AppComponent], /** 将模块内部成员export出去 */
