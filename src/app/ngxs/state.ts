@@ -22,6 +22,6 @@ export class CountState {
   change({ getState, setState }, action) {
     const value = action.value;
     const state = getState();
-    setState(value);
+    setState(Number(value));
   }
 }
