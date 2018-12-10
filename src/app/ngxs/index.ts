@@ -19,5 +19,4 @@ export class Ngxs  {
   onClick() {
     this.store.dispatch(new Add()).subscribe(() => {console.log('自加显示')});
   }
-
 }

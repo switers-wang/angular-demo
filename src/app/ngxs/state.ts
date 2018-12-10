@@ -10,7 +10,6 @@ export class Change {
 
 @State<object>({
   name: 'count',
-  // defaults: 0
   defaults: {
     value: 0,
   }
