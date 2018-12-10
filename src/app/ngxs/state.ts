@@ -8,20 +8,30 @@ export class Change {
   constructor(public value) {}
 }
 
-@State<number>({
+@State<object>({
   name: 'count',
-  defaults: 0
+  // defaults: 0
+  defaults: {
+    value: 0,
+  }
 })
 export class CountState {
 @Action(Add)
   add({ getState, setState }) {
     const state = getState();
-    setState(state + 1);
+    setState({
+      value: state.value + 1,
+      type: 'add-myself'
+    });
   }
 @Action(Change)
   change({ getState, setState }, action) {
     const value = action.value;
     const state = getState();
     setState(Number(value));
+    setState({
+      value: Number(value),
+      type: 'change value'
+    });
   }
 }

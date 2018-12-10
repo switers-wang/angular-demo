@@ -1,4 +1,5 @@
-<h1>Count is {{count$ | async}}</h1>
+<h1>Count is {{(count$ | async).value}}</h1>
+<h1>改变方式 {{(count$ | async).type}}</h1>
 <input #input keyup="changeValue(input.value)" />
 <button (click)="onClick()">+1</button>
 <button (click)="onChange(input.value)">changevalue</button>
