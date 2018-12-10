@@ -14,10 +14,10 @@ export class Ngxs  {
   constructor(private store: Store) {}
 
   onChange(value) {
-    this.store.dispatch(new Change(value));
+    this.store.dispatch(new Change(value)).subscribe(() => {console.log('input 输入值显示')});
   }
   onClick() {
-    this.store.dispatch(new Add());
+    this.store.dispatch(new Add()).subscribe(() => {console.log('自加显示')});
   }
 
 }
